@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Бейорганикалық химия | Магистратураға дайындық</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(59, 130, 246, 0.18), transparent 34%),
+        radial-gradient(circle at top right, rgba(168, 85, 247, 0.14), transparent 30%),
+        radial-gradient(circle at bottom, rgba(34, 197, 94, 0.12), transparent 34%),
+        linear-gradient(135deg, #f8fbff 0%, #f3f4ff 44%, #ffffff 100%);
+      color: #172033;
+      line-height: 1.62;
+      padding-bottom: 44px;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 14px;
+    }
+
+    .hero {
+      border-radius: 28px;
+      padding: 28px 18px;
+      margin-bottom: 14px;
+      background:
+        linear-gradient(135deg, rgba(30, 64, 175, 0.96), rgba(124, 58, 237, 0.92), rgba(5, 150, 105, 0.88)),
+        url("data:image/svg+xml,%3Csvg width='160' height='160' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='rgba(255,255,255,0.19)' stroke-width='2'%3E%3Cpath d='M20 80 L80 20 L140 80 L80 140 Z'/%3E%3Ccircle cx='80' cy='80' r='34'/%3E%3Cpath d='M20 20 L140 140 M140 20 L20 140'/%3E%3C/g%3E%3C/svg%3E");
+      color: white;
+      box-shadow: 0 18px 45px rgba(30, 64, 175, 0.22);
+      overflow: hidden;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 12px;
+      backdrop-filter: blur(8px);
+    }
+
+    .hero h1 {
+      font-size: clamp(25px, 5vw, 46px);
+      line-height: 1.08;
+      margin-bottom: 12px;
+      letter-spacing: -0.04em;
+    }
+
+    .hero p {
+      max-width: 900px;
+      font-size: clamp(15px, 2.5vw, 18px);
+      opacity: 0.96;
+      margin-bottom: 18px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .hero-card {
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.23);
+      border-radius: 18px;
+      padding: 12px;
+      min-height: 88px;
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-card b {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+
+    .hero-card span {
+      display: block;
+      font-size: 13px;
+      opacity: 0.92;
+    }
+
+    .rights {
+      margin: 12px 0 16px;
+      border-radius: 18px;
+      padding: 13px 14px;
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      color: #7c2d12;
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    .top-nav-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(248, 251, 255, 0.88);
+      backdrop-filter: blur(14px);
+      padding: 8px 0;
+      margin-bottom: 16px;
+    }
+
+    .top-nav {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 4px 2px 8px;
+      scrollbar-width: thin;
+    }
+
+    .top-nav a {
+      flex: 0 0 auto;
+      text-decoration: none;
+      color: #1e3a8a;
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid rgba(30, 58, 138, 0.14);
+      border-radius: 999px;
+      padding: 9px 12px;
+      font-size: 13px;
+      font-weight: 850;
+      box-shadow: 0 8px 20px rgba(30, 58, 138, 0.06);
+      white-space: nowrap;
+    }
+
+    .top-nav a:hover {
+      background: #eef2ff;
+      border-color: #818cf8;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .intro-card {
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid rgba(30, 58, 138, 0.12);
+      border-radius: 22px;
+      padding: 18px;
+      box-shadow: 0 14px 36px rgba(30, 58, 138, 0.08);
+    }
+
+    .intro-card h2 {
+      font-size: 21px;
+      margin-bottom: 10px;
+      color: #1e3a8a;
+    }
+
+    .intro-card p {
+      margin-bottom: 10px;
+      color: #334155;
+      font-size: 15px;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .tag {
+      border-radius: 999px;
+      padding: 7px 10px;
+      background: #eef2ff;
+      color: #3730a3;
+      border: 1px solid #c7d2fe;
+      font-size: 12.5px;
+      font-weight: 780;
+    }
+
+    .kt-map {
+      margin-top: 12px;
+      border-radius: 16px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+    }
+
+    .kt-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+      padding: 10px 12px;
+      border-bottom: 1px solid #e2e8f0;
+      font-size: 14px;
+    }
+
+    .kt-row:last-child {
+      border-bottom: none;
+    }
+
+    .kt-row b {
+      color: #0f172a;
+    }
+
+    .kt-row span {
+      color: #475569;
+      font-weight: 800;
+    }
+
+    .study-block {
+      scroll-margin-top: 92px;
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid rgba(30, 58, 138, 0.12);
+      border-radius: 24px;
+      margin: 18px 0;
+      overflow: hidden;
+      box-shadow: 0 18px 45px rgba(30, 58, 138, 0.08);
+    }
+
+    .study-block-header {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 18px;
+      background: linear-gradient(135deg, #e0e7ff, #ecfeff, #f0fdf4);
+      border-bottom: 1px solid rgba(30, 58, 138, 0.1);
+    }
+
+    .block-number {
+      flex: 0 0 auto;
+      width: 46px;
+      height: 46px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      color: white;
+      background: linear-gradient(135deg, #1d4ed8, #7c3aed, #059669);
+      font-size: 21px;
+      font-weight: 950;
+      box-shadow: 0 10px 24px rgba(79, 70, 229, 0.25);
+    }
+
+    .study-block-header h2 {
+      font-size: clamp(20px, 3.2vw, 28px);
+      color: #1e3a8a;
+      line-height: 1.18;
+      margin-bottom: 6px;
+    }
+
+    .study-block-header p {
+      color: #475569;
+      font-size: 14.5px;
+    }
+
+    .mini-tabs {
+      display: flex;
+      gap: 7px;
+      overflow-x: auto;
+      padding: 12px 14px;
+      background: #f8fafc;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .mini-tabs button {
+      flex: 0 0 auto;
+      border: none;
+      border-radius: 999px;
+      padding: 9px 13px;
+      background: #e2e8f0;
+      color: #334155;
+      font-weight: 850;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .mini-tabs button.active {
+      background: linear-gradient(135deg, #2563eb, #7c3aed, #059669);
+      color: white;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 16px;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    details {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 13px 14px;
+      margin-bottom: 10px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 850;
+      color: #1e3a8a;
+      font-size: 15.5px;
+    }
+
+    details p {
+      margin-top: 9px;
+      color: #334155;
+      font-size: 15px;
+    }
+
+    .formula-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .formula {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-left: 5px solid #6366f1;
+      border-radius: 16px;
+      padding: 12px;
+      font-weight: 850;
+      color: #0f172a;
+      overflow-x: auto;
+    }
+
+    .term-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .term {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 12px;
+    }
+
+    .term b {
+      color: #3730a3;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .term p {
+      color: #475569;
+      font-size: 14.5px;
+    }
+
+    .question {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 18px;
+      padding: 14px;
+      margin-bottom: 13px;
+    }
+
+    .question p {
+      font-weight: 850;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+
+    .option {
+      display: block;
+      border: 1px solid #dbe3ec;
+      border-radius: 14px;
+      padding: 10px 11px;
+      margin: 8px 0;
+      cursor: pointer;
+      background: #f8fafc;
+      color: #334155;
+      font-size: 14.5px;
+    }
+
+    .option input {
+      margin-right: 8px;
+      transform: translateY(1px);
+    }
+
+    .option.correct {
+      border-color: #16a34a;
+      background: #dcfce7;
+      color: #14532d;
+      font-weight: 750;
+    }
+
+    .option.wrong {
+      border-color: #dc2626;
+      background: #fee2e2;
+      color: #7f1d1d;
+      font-weight: 750;
+    }
+
+    .explain {
+      display: none;
+      margin-top: 10px;
+      border-radius: 14px;
+      padding: 11px;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      color: #1e3a8a;
+      font-size: 14px;
+    }
+
+    .explain.show {
+      display: block;
+    }
+
+    .check-btn {
+      display: block;
+      width: 100%;
+      border: none;
+      border-radius: 18px;
+      padding: 14px 16px;
+      margin-top: 14px;
+      background: linear-gradient(135deg, #2563eb, #7c3aed, #059669);
+      color: white;
+      font-size: 16px;
+      font-weight: 950;
+      cursor: pointer;
+      box-shadow: 0 14px 30px rgba(79, 70, 229, 0.22);
+    }
+
+    .result {
+      display: none;
+      margin-bottom: 14px;
+      border-radius: 18px;
+      padding: 14px;
+      background: #f0fdf4;
+      border: 1px solid #86efac;
+      color: #14532d;
+    }
+
+    .result.show {
+      display: block;
+    }
+
+    .score {
+      font-size: 26px;
+      font-weight: 950;
+      margin-bottom: 4px;
+    }
+
+    .copyright-note {
+      margin-top: 22px;
+      border-radius: 18px;
+      padding: 14px;
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      color: #7c2d12;
+      font-size: 14px;
+      font-weight: 750;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      margin: 18px 0 8px;
+      color: #64748b;
+      font-size: 13px;
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        padding: 10px;
+      }
+
+      .hero {
+        border-radius: 22px;
+        padding: 22px 15px;
+      }
+
+      .hero-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .intro {
+        grid-template-columns: 1fr;
+      }
+
+      .study-block-header {
+        gap: 10px;
+        padding: 15px;
+      }
+
+      .block-number {
+        width: 40px;
+        height: 40px;
+        border-radius: 14px;
+        font-size: 19px;
+      }
+
+      .formula-list,
+      .term-list {
+        grid-template-columns: 1fr;
+      }
+
+      .tab-content {
+        padding: 13px;
+      }
+
+      .top-nav a {
+        font-size: 12.5px;
+        padding: 8px 10px;
+      }
+    }
+
+    @media (max-width: 430px) {
+      body {
+        background: #f8fbff;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        min-height: auto;
+      }
+
+      .study-block {
+        border-radius: 20px;
+      }
+
+      .question {
+        padding: 12px;
+      }
+
+      .option {
+        font-size: 14px;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <header class="hero">
+      <div class="hero-badge">Бейорганикалық химия · Магистратураға дайындық</div>
+
+      <h1>Шрайвер бойынша бейорганикалық химия</h1>
+
+      <p>
+        Бұл сайт бейорганикалық химия мен периодтық жүйедегі элементтер химиясын
+        КТ құрылымына жақын форматта қайталауға арналған. Негізгі мақсат —
+        атом құрылысы, химиялық байланыс, қышқыл-негіз, тотығу-тотықсыздану,
+        периодтық заңдылықтар, s-, p-, d-блок элементтері және координациялық
+        қосылыстар бойынша нақты дайындық жасау.
+      </p>
+
+      <div class="hero-grid">
+        <div class="hero-card">
+          <b>10 блок</b>
+          <span>КТ-ға ыңғайлы жүйелі құрылым</span>
+        </div>
+
+        <div class="hero-card">
+          <b>12/30 сұрақ</b>
+          <span>Бейорганика және элементтер химиясы</span>
+        </div>
+
+        <div class="hero-card">
+          <b>Нақты теория</b>
+          <span>Анықтама, заңдылық, қасиет, реакция</span>
+        </div>
+
+        <div class="hero-card">
+          <b>Тест форматы</b>
+          <span>5 жауап нұсқасы, 1 дұрыс жауап</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="rights">
+      Автор: Назерке. Барлық құқық қорғалған. Бұл материалды автордың рұқсатынсыз
+      сатуға, көшіруге, қайта таратуға, ақылы курс ретінде қолдануға немесе
+      коммерциялық мақсатта пайдалануға болмайды.
+    </div>
+
+    <div class="top-nav-wrap">
+      <nav class="top-nav">
+        <a href="#block1">1. Атом құрылысы</a>
+        <a href="#block2">2. Байланыс</a>
+        <a href="#block3">3. Қатты заттар</a>
+        <a href="#block4">4. Қышқыл-негіз</a>
+        <a href="#block5">5. Redox</a>
+        <a href="#block6
+          ">6. s-блок</a>
+        <a href="#block7">7. p-блок</a>
+        <a href="#block8">8. d-блок</a>
+        <a href="#block9">9. Кешендер</a>
+        <a href="#block10">10. Қатты дене, катализ</a>
+      </nav>
+    </div>
+
+    <section class="intro">
+      <div class="intro-card">
+        <h2>Сайттың мақсаты</h2>
+        <p>
+          Бейорганикалық химиядағы негізгі түсініктерді КТ форматына жақын түрде
+          қайталау: қысқа теория, маңызды заңдылықтар, реакциялық типтер,
+          формула/кестелік ережелер, терминдер және тест сұрақтары.
+        </p>
+        <p>
+          Материал кітаптағы барлық терең ақпаратты толық көшіру үшін емес,
+          КТ-да жиі сұралатын негізгі блоктарды жүйелеу үшін жасалады.
+        </p>
+
+        <div class="kt-map">
+          <div class="kt-row">
+            <b>Бейорганикалық химия</b>
+            <span>6 сұрақ</span>
+          </div>
+          <div class="kt-row">
+            <b>Периодтық жүйедегі элементтер химиясы</b>
+            <span>6 сұрақ</span>
+          </div>
+          <div class="kt-row">
+            <b>Жалпы үлесі</b>
+            <span>12/30</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="intro-card">
+        <h2>Негізгі бағыттар</h2>
+        <div class="tag-list">
+          <span class="tag">Атом құрылысы</span>
+          <span class="tag">Периодтық заң</span>
+          <span class="tag">Химиялық байланыс</span>
+          <span class="tag">Иондық қатты заттар</span>
+          <span class="tag">Қышқыл-негіз</span>
+          <span class="tag">Тотығу-тотықсыздану</span>
+          <span class="tag">s-блок</span>
+          <span class="tag">p-блок</span>
+          <span class="tag">d-блок</span>
+          <span class="tag">Координациялық химия</span>
+        </div>
+      </div>
+    </section>
+    <section id="block2" class="study-block">
+      <div class="study-block-header">
+        <div class="block-number">2</div>
+        <div>
+          <h2>Химиялық байланыс және молекула құрылысы</h2>
+          <p>
+            Льюис құрылымдары, октет ережесі, резонанс, VSEPR моделі,
+            валенттік байланыс теориясы, молекулалық орбитальдар, байланыс реті,
+            байланыс ұзындығы, байланыс энергиясы, электртерістілік және тотығу дәрежесі.
+          </p>
+        </div>
+      </div>
+
+      <div class="mini-tabs">
+        <button class="active" onclick="openTab(event, 'block2', 'theory')">Теория</button>
+        <button onclick="openTab(event, 'block2', 'formula')">Формула</button>
+        <button onclick="openTab(event, 'block2', 'terms')">Термин</button>
+        <button onclick="openTab(event, 'block2', 'test')">Тест</button>
+      </div>
+
+      <div class="tab-content active" data-tab="theory">
+        <details open>
+          <summary>Химиялық байланыстың мәні</summary>
+          <p>
+            Химиялық байланыс атомдардың тұрақты жүйе түзу үшін электрондарын қайта
+            бөлуі немесе ортақтастыруы нәтижесінде пайда болады. Бейорганикалық
+            химияда байланыс түрін түсіну заттың құрылысы, реакциялық қабілеті,
+            балқу температурасы, ерігіштігі және электрөткізгіштігін болжауға көмектеседі.
+          </p>
+        </details>
+
+        <details>
+          <summary>Льюис құрылымы</summary>
+          <p>
+            Льюис құрылымы валенттік электрондарды нүктелер немесе сызықтар арқылы
+            көрсетеді. Бір сызық бір электрон жұбын білдіреді. Бұл әдіс молекуладағы
+            байланысқан және байланыспаған электрон жұптарын көрсетуге ыңғайлы.
+          </p>
+        </details>
+
+        <details>
+          <summary>Октет ережесі</summary>
+          <p>
+            Октет ережесі бойынша көптеген негізгі топ элементтері сыртқы қабатында
+            сегіз электрон болғанда тұрақты электрондық құрылымға жақындайды.
+            Бірақ сутек, бериллий, бор және үшінші периодтан кейінгі кейбір элементтер
+            үшін бұл ережеден ауытқулар кездеседі.
+          </p>
+        </details>
+
+        <details>
+          <summary>Резонанс</summary>
+          <p>
+            Кейбір бөлшектердің нақты электрондық құрылысы бір ғана Льюис құрылымымен
+            толық сипатталмайды. Мұндай жағдайда бірнеше резонанстық құрылым қолданылады.
+            Нақты құрылым — осы шектік құрылымдардың резонанстық гибриді.
+          </p>
+        </details>
+
+        <details>
+          <summary>Формальды заряд</summary>
+          <p>
+            Формальды заряд Льюис құрылымының қолайлы нұсқасын таңдауға көмектеседі.
+            Ең тұрақты құрылымда формальды зарядтар аз, ал теріс заряд электртерістілігі
+            жоғары атомда орналасуы тиімді болады.
+          </p>
+        </details>
+
+        <details>
+          <summary>VSEPR моделі</summary>
+          <p>
+            VSEPR моделі молекула пішінін орталық атом айналасындағы электрон жұптарының
+            тебілуі арқылы түсіндіреді. Байланысқан және байланыспаған электрон жұптары
+            кеңістікте бір-бірінен мүмкіндігінше алысырақ орналасады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Электрон жұптарының тебілу реті</summary>
+          <p>
+            Байланыспаған электрон жұбы байланысқан жұпқа қарағанда кеңірек аймақ алады,
+            сондықтан тебілуі күшті болады. Жалпы тебілу күші: байланыспаған жұп —
+            байланыспаған жұп, байланыспаған жұп — байланысқан жұп, байланысқан жұп —
+            байланысқан жұп ретімен азаяды.
+          </p>
+        </details>
+
+        <details>
+          <summary>Молекула пішіндері</summary>
+          <p>
+            Орталық атом айналасындағы электрондық домендер саны молекула пішінін
+            анықтайды. Екі домен — сызықтық, үш домен — тригональды жазық,
+            төрт домен — тетраэдрлік электрондық орналасуға сәйкес келеді.
+          </p>
+        </details>
+
+        <details>
+          <summary>Валенттік байланыс теориясы</summary>
+          <p>
+            Валенттік байланыс теориясы химиялық байланысты атомдық орбитальдардың
+            қабысуы арқылы түсіндіреді. Байланыс түзу үшін орбитальдар кеңістікте
+            тиімді қабысып, электрон жұбын ортақтастыруы керек.
+          </p>
+        </details>
+
+        <details>
+          <summary>σ және π байланыстар</summary>
+          <p>
+            σ-байланыс орбитальдардың ядроларды қосатын ось бойымен қабысуынан түзіледі.
+            π-байланыс бүйірлік қабысу арқылы түзіледі. Қос байланыста бір σ және бір π,
+            үш байланыста бір σ және екі π байланыс болады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Гибридтену</summary>
+          <p>
+            Гибридтену — атомдық орбитальдардың араласып, бағытталған жаңа гибрид
+            орбитальдар түзуі. sp, sp² және sp³ гибридтенулері молекулалардың
+            сызықтық, тригональды жазық және тетраэдрлік пішіндерін түсіндіреді.
+          </p>
+        </details>
+
+        <details>
+          <summary>Молекулалық орбиталь теориясы</summary>
+          <p>
+            Молекулалық орбиталь теориясында электрондар бүкіл молекулаға таралған
+            орбитальдарда орналасады. Атомдық орбитальдар қосылып, байланысушы және
+            босаңдатушы молекулалық орбитальдар түзеді.
+          </p>
+        </details>
+
+        <details>
+          <summary>Байланысушы және босаңдатушы орбитальдар</summary>
+          <p>
+            Байланысушы орбиталь электрон тығыздығын ядролар арасына жинақтап,
+            энергияны төмендетеді және байланысты тұрақтандырады. Босаңдатушы орбиталь
+            энергияны арттырып, байланыс тұрақтылығын төмендетеді.
+          </p>
+        </details>
+
+        <details>
+          <summary>Байланыс реті</summary>
+          <p>
+            Байланыс реті байланысушы және босаңдатушы орбитальдардағы электрондар
+            саны арқылы анықталады. Байланыс реті жоғарылаған сайын байланыс қысқарады
+            және беріктігі артады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Байланыс ұзындығы және байланыс энергиясы</summary>
+          <p>
+            Байланыс ұзындығы — байланысқан атом ядроларының арақашықтығы. Байланыс
+            энергиясы байланысты үзуге қажет энергияны сипаттайды. Әдетте байланыс
+            реті артса, байланыс ұзындығы қысқарып, байланыс энергиясы артады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Полярлық байланыс</summary>
+          <p>
+            Егер байланысқан атомдардың электртерістілігі әртүрлі болса, электрон
+            тығыздығы электртерістілігі жоғары атомға ығысады. Нәтижесінде полярлы
+            ковалентті байланыс және ішінара зарядтар пайда болады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Тотығу дәрежесі</summary>
+          <p>
+            Тотығу дәрежесі қосылыстағы атомның шартты зарядын көрсетеді. Ол redox
+            реакцияларын талдауға, формула құрастыруға және бейорганикалық қосылыстардың
+            қасиетін салыстыруға қолданылады.
+          </p>
+        </details>
+      </div>
+
+      <div class="tab-content" data-tab="formula">
+        <div class="formula-list">
+          <div class="formula">Октет ережесі: валенттік қабатта 8 электронға ұмтылу</div>
+          <div class="formula">Бір байланыс: 1 электрон жұбы</div>
+          <div class="formula">Қос байланыс: 1σ + 1π</div>
+          <div class="formula">Үш байланыс: 1σ + 2π</div>
+          <div class="formula">Формальды заряд: FC = V − N − B/2</div>
+          <div class="formula">V — валенттік электрон саны</div>
+          <div class="formula">N — байланыспаған электрон саны</div>
+          <div class="formula">B — байланысқан электрон саны</div>
+          <div class="formula">2 электрондық домен → сызықтық пішін</div>
+          <div class="formula">3 электрондық домен → тригональды жазық</div>
+          <div class="formula">4 электрондық домен → тетраэдрлік орналасу</div>
+          <div class="formula">sp гибридтену → 180°</div>
+          <div class="formula">sp² гибридтену → шамамен 120°</div>
+          <div class="formula">sp³ гибридтену → шамамен 109.5°</div>
+          <div class="formula">Байланыс реті: BO = (Nb − Na)/2</div>
+          <div class="formula">Nb — байланысушы электрондар саны</div>
+          <div class="formula">Na — босаңдатушы электрондар саны</div>
+          <div class="formula">Байланыс реті ↑ → байланыс ұзындығы ↓</div>
+          <div class="formula">Байланыс реті ↑ → байланыс энергиясы ↑</div>
+        </div>
+      </div>
+
+      <div class="tab-content" data-tab="terms">
+        <div class="term-list">
+          <div class="term">
+            <b>Химиялық байланыс</b>
+            <p>Атомдарды тұрақты бөлшекке біріктіретін электрондық өзара әрекеттесу.</p>
+          </div>
+
+          <div class="term">
+            <b>Льюис құрылымы</b>
+            <p>Валенттік электрондар мен байланыстарды нүкте және сызық арқылы көрсету.</p>
+          </div>
+
+          <div class="term">
+            <b>Октет ережесі</b>
+            <p>Атомдардың сыртқы қабатта сегіз электронға жақындау үрдісі.</p>
+          </div>
+
+          <div class="term">
+            <b>Резонанс</b>
+            <p>Бір бөлшектің электрондық құрылымын бірнеше шектік құрылым арқылы сипаттау.</p>
+          </div>
+
+          <div class="term">
+            <b>Формальды заряд</b>
+            <p>Льюис құрылымындағы атомға шартты түрде берілетін заряд.</p>
+          </div>
+
+          <div class="term">
+            <b>VSEPR моделі</b>
+            <p>Молекула пішінін электрон жұптарының тебілуі арқылы түсіндіретін модель.</p>
+          </div>
+
+          <div class="term">
+            <b>Байланыспаған жұп</b>
+            <p>Атомда орналасқан, бірақ байланыс түзуге қатыспайтын электрон жұбы.</p>
+          </div>
+
+          <div class="term">
+            <b>σ-байланыс</b>
+            <p>Орбитальдардың ядроларды қосатын ось бойымен қабысуынан түзілетін байланыс.</p>
+          </div>
+
+          <div class="term">
+            <b>π-байланыс</b>
+            <p>Орбитальдардың бүйірлік қабысуынан түзілетін байланыс.</p>
+          </div>
+
+          <div class="term">
+            <b>Гибридтену</b>
+            <p>Атомдық орбитальдардың араласып, жаңа бағытталған орбитальдар түзуі.</p>
+          </div>
+
+          <div class="term">
+            <b>Молекулалық орбиталь</b>
+            <p>Молекуладағы электронның бүкіл молекулаға таралған күйін сипаттайтын орбиталь.</p>
+          </div>
+
+          <div class="term">
+            <b>Байланысушы орбиталь</b>
+            <p>Энергияны төмендетіп, атомдар арасындағы байланысты күшейтетін орбиталь.</p>
+          </div>
+
+          <div class="term">
+            <b>Босаңдатушы орбиталь</b>
+            <p>Энергияны арттырып, байланысты әлсірететін молекулалық орбиталь.</p>
+          </div>
+
+          <div class="term">
+            <b>Байланыс реті</b>
+            <p>Байланыстың салыстырмалы беріктігін сипаттайтын шама.</p>
+          </div>
+
+          <div class="term">
+            <b>Байланыс ұзындығы</b>
+            <p>Байланысқан атом ядролары арасындағы қашықтық.</p>
+          </div>
+
+          <div class="term">
+            <b>Полярлы байланыс</b>
+            <p>Электрон тығыздығы бір атомға көбірек ығысқан ковалентті байланыс.</p>
+          </div>
+
+          <div class="term">
+            <b>Тотығу дәрежесі</b>
+            <p>Қосылыстағы атомның шартты заряды.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" data-tab="test">
+        <div id="block2Result" class="result"></div>
+
+        <div class="question" data-answer="2">
+          <p>1. Льюис құрылымының негізгі қызметі:</p>
+          <label class="option"><input type="radio" name="s2q1" value="0"> Ядро құрамындағы протон мен нейтрон санын көрсету</label>
+          <label class="option"><input type="radio" name="s2q1" value="1"> Кристалл торының кеңістіктік параметрлерін есептеу</label>
+          <label class="option"><input type="radio" name="s2q1" value="2"> Валенттік электрондар мен байланысқан электрон жұптарын көрсету</label>
+          <label class="option"><input type="radio" name="s2q1" value="3"> Ерітіндінің pH мәнін тікелей анықтау</label>
+          <label class="option"><input type="radio" name="s2q1" value="4"> Электрод потенциалын концентрация арқылы есептеу</label>
+          <div class="explain">Дұрыс жауап: C. Льюис құрылымы валенттік электрондардың байланысқа қатысуын көрсетеді.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>2. Октет ережесінің мағынасы дұрыс берілген қатар:</p>
+          <label class="option"><input type="radio" name="s2q2" value="0"> Атомдар ядросында сегіз протон болғанда тұрақтанады</label>
+          <label class="option"><input type="radio" name="s2q2" value="1"> Барлық элементтер сегіз байланыс түзу арқылы тұрақты болады</label>
+          <label class="option"><input type="radio" name="s2q2" value="2"> Электрондар d-деңгейшеге толық орналасқанда ғана қосылыс түзіледі</label>
+          <label class="option"><input type="radio" name="s2q2" value="3"> Молекуладағы барлық атомдар бірдей электртерістілікке ие болуы керек</label>
+          <label class="option"><input type="radio" name="s2q2" value="4"> Көптеген атомдар сыртқы қабатта сегіз электронға жақындағанда тұрақтырақ болады</label>
+          <div class="explain">Дұрыс жауап: E. Октет ережесі валенттік қабаттағы сегіз электрондық тұрақты құрылымға ұмтылуды сипаттайды.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>3. Резонанс құбылысы қай жағдайда қолданылады?</p>
+          <label class="option"><input type="radio" name="s2q3" value="0"> Бір ғана Льюис құрылымы нақты электрондық таралуды толық көрсете алмағанда</label>
+          <label class="option"><input type="radio" name="s2q3" value="1"> Атом радиусы период бойынша өзгергенде</label>
+          <label class="option"><input type="radio" name="s2q3" value="2"> Ерітіндідегі иондардың концентрациясы артқанда</label>
+          <label class="option"><input type="radio" name="s2q3" value="3"> Қатты заттың кристалл торында ақау пайда болғанда</label>
+          <label class="option"><input type="radio" name="s2q3" value="4"> Электролиз кезінде ток күші өзгергенде</label>
+          <div class="explain">Дұрыс жауап: A. Резонанс бірнеше шектік құрылым арқылы нақты электрондық гибридті сипаттайды.</div>
+        </div>
+
+        <div class="question" data-answer="3">
+          <p>4. Формальды зарядты есептеу өрнегі:</p>
+          <label class="option"><input type="radio" name="s2q4" value="0"> FC = V + N + B/2</label>
+          <label class="option"><input type="radio" name="s2q4" value="1"> FC = B − V − N</label>
+          <label class="option"><input type="radio" name="s2q4" value="2"> FC = V − B − 2N</label>
+          <label class="option"><input type="radio" name="s2q4" value="3"> FC = V − N − B/2</label>
+          <label class="option"><input type="radio" name="s2q4" value="4"> FC = N − V + B</label>
+          <div class="explain">Дұрыс жауап: D. Формальды заряд: FC = V − N − B/2.</div>
+        </div>
+
+        <div class="question" data-answer="1">
+          <p>5. VSEPR моделі молекула пішінін қандай фактор арқылы түсіндіреді?</p>
+          <label class="option"><input type="radio" name="s2q5" value="0"> Ядро массаларының қосындысы арқылы</label>
+          <label class="option"><input type="radio" name="s2q5" value="1"> Орталық атом айналасындағы электрон жұптарының тебілуі арқылы</label>
+          <label class="option"><input type="radio" name="s2q5" value="2"> Изотоптардың табиғи таралуы арқылы</label>
+          <label class="option"><input type="radio" name="s2q5" value="3"> Иондану энергиясының сандық мәні арқылы</label>
+          <label class="option"><input type="radio" name="s2q5" value="4"> Тотығу дәрежелерінің қосындысы арқылы</label>
+          <div class="explain">Дұрыс жауап: B. VSEPR электрон жұптарының бір-бірінен алысырақ орналасуға ұмтылуын негізге алады.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>6. Орталық атомда екі электрондық домен болса, молекуланың негізгі геометриясы:</p>
+          <label class="option"><input type="radio" name="s2q6" value="0"> Тетраэдрлік</label>
+          <label class="option"><input type="radio" name="s2q6" value="1"> Октаэдрлік</label>
+          <label class="option"><input type="radio" name="s2q6" value="2"> Тригональды пирамида</label>
+          <label class="option"><input type="radio" name="s2q6" value="3"> Бұрышты</label>
+          <label class="option"><input type="radio" name="s2q6" value="4"> Сызықтық</label>
+          <div class="explain">Дұрыс жауап: E. Екі электрондық домен 180° бұрышпен сызықтық орналасады.</div>
+        </div>
+
+        <div class="question" data-answer="2">
+          <p>7. Үш электрондық доменге сәйкес негізгі электрондық орналасу:</p>
+          <label class="option"><input type="radio" name="s2q7" value="0"> Сызықтық</label>
+          <label class="option"><input type="radio" name="s2q7" value="1"> Тетраэдрлік</label>
+          <label class="option"><input type="radio" name="s2q7" value="2"> Тригональды жазық</label>
+          <label class="option"><input type="radio" name="s2q7" value="3"> Квадрат жазық</label>
+          <label class="option"><input type="radio" name="s2q7" value="4"> Октаэдрлік</label>
+          <div class="explain">Дұрыс жауап: C. Үш электрондық домен бір жазықтықта шамамен 120° бұрышпен орналасады.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>8. Төрт электрондық домен үшін негізгі электрондық орналасу:</p>
+          <label class="option"><input type="radio" name="s2q8" value="0"> Тетраэдрлік</label>
+          <label class="option"><input type="radio" name="s2q8" value="1"> Сызықтық</label>
+          <label class="option"><input type="radio" name="s2q8" value="2"> Тригональды жазық</label>
+          <label class="option"><input type="radio" name="s2q8" value="3"> Квадрат пирамида</label>
+          <label class="option"><input type="radio" name="s2q8" value="4"> Квадрат жазық</label>
+          <div class="explain">Дұрыс жауап: A. Төрт электрондық домен тетраэдрлік орналасуға сәйкес келеді.</div>
+        </div>
+
+        <div class="question" data-answer="3">
+          <p>9. Аммиак молекуласының NH₃ пішіні VSEPR бойынша қалай сипатталады?</p>
+          <label class="option"><input type="radio" name="s2q9" value="0"> Сызықтық, себебі үш байланыс бір осьте орналасады</label>
+          <label class="option"><input type="radio" name="s2q9" value="1"> Тригональды жазық, себебі азотта байланыспаған жұп жоқ</label>
+          <label class="option"><input type="radio" name="s2q9" value="2"> Тетраэдрлік, себебі молекуладағы барлық домендер байланысқан</label>
+          <label class="option"><input type="radio" name="s2q9" value="3"> Тригональды пирамида, себебі үш байланысқан жұп және бір байланыспаған жұп бар</label>
+          <label class="option"><input type="radio" name="s2q9" value="4"> Квадрат жазық, себебі азот төрт лигандпен қоршалған</label>
+          <div class="explain">Дұрыс жауап: D. NH₃ молекуласында азот айналасында 3 байланысқан жұп және 1 байланыспаған жұп бар.</div>
+        </div>
+
+        <div class="question" data-answer="1">
+          <p>10. Су молекуласының H₂O пішіні қалай сипатталады?</p>
+          <label class="option"><input type="radio" name="s2q10" value="0"> Сызықтық, себебі молекулада екі O–H байланысы бар</label>
+          <label class="option"><input type="radio" name="s2q10" value="1"> Бұрышты, себебі оттекте екі байланысқан және екі байланыспаған электрон жұбы бар</label>
+          <label class="option"><input type="radio" name="s2q10" value="2"> Тригональды жазық, себебі оттек үш домен түзеді</label>
+          <label class="option"><input type="radio" name="s2q10" value="3"> Октаэдрлік, себебі оттек жоғары электртерісті</label>
+          <label class="option"><input type="radio" name="s2q10" value="4"> Квадрат жазық, себебі молекулада төрт электрон бар</label>
+          <div class="explain">Дұрыс жауап: B. H₂O молекуласында екі байланыспаған жұп бар, сондықтан пішіні бұрышты.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>11. σ-байланысқа сәйкес сипаттама:</p>
+          <label class="option"><input type="radio" name="s2q11" value="0"> Орбитальдардың бүйірлік қабысуынан түзіледі</label>
+          <label class="option"><input type="radio" name="s2q11" value="1"> Электрондар тек босаңдатушы орбитальда орналасқанда түзіледі</label>
+          <label class="option"><input type="radio" name="s2q11" value="2"> Байланыс осіне перпендикуляр бағытта ғана орналасады</label>
+          <label class="option"><input type="radio" name="s2q11" value="3"> Қос байланыста болмайды</label>
+          <label class="option"><input type="radio" name="s2q11" value="4"> Орбитальдардың ядроларды қосатын ось бойымен қабысуынан түзіледі</label>
+          <div class="explain">Дұрыс жауап: E. σ-байланыс осьтік қабысу арқылы түзіледі.</div>
+        </div>
+
+        <div class="question" data-answer="2">
+          <p>12. π-байланыс қалай түзіледі?</p>
+          <label class="option"><input type="radio" name="s2q12" value="0"> s-орбитальдардың толық осьтік қабысуынан</label>
+          <label class="option"><input type="radio" name="s2q12" value="1"> Ядролардың тікелей қосылуынан</label>
+          <label class="option"><input type="radio" name="s2q12" value="2"> Орбитальдардың бүйірлік қабысуынан</label>
+          <label class="option"><input type="radio" name="s2q12" value="3"> Иондардың кристалл торында ретсіз орналасуынан</label>
+          <label class="option"><input type="radio" name="s2q12" value="4"> Электрондардың толық жоғалуынан</label>
+          <div class="explain">Дұрыс жауап: C. π-байланыс p-орбитальдардың бүйірлік қабысуы арқылы түзіледі.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>13. Қос байланыстың құрамы дұрыс берілген қатар:</p>
+          <label class="option"><input type="radio" name="s2q13" value="0"> Бір σ және бір π байланыс</label>
+          <label class="option"><input type="radio" name="s2q13" value="1"> Екі σ байланыс</label>
+          <label class="option"><input type="radio" name="s2q13" value="2"> Екі π байланыс</label>
+          <label class="option"><input type="radio" name="s2q13" value="3"> Бір σ және екі π байланыс</label>
+          <label class="option"><input type="radio" name="s2q13" value="4"> Бір иондық және бір металдық байланыс</label>
+          <div class="explain">Дұрыс жауап: A. Қос байланыста бір σ және бір π байланыс болады.</div>
+        </div>
+
+        <div class="question" data-answer="3">
+          <p>14. sp³ гибридтенуге тән кеңістіктік орналасу және бұрыш:</p>
+          <label class="option"><input type="radio" name="s2q14" value="0"> Сызықтық, 180°</label>
+          <label class="option"><input type="radio" name="s2q14" value="1"> Тригональды жазық, 120°</label>
+          <label class="option"><input type="radio" name="s2q14" value="2"> Квадрат жазық, 90°</label>
+          <label class="option"><input type="radio" name="s2q14" value="3"> Тетраэдрлік, шамамен 109.5°</label>
+          <label class="option"><input type="radio" name="s2q14" value="4"> Октаэдрлік, 90° және 180°</label>
+          <div class="explain">Дұрыс жауап: D. sp³ гибридтену тетраэдрлік бағытталуға сәйкес келеді.</div>
+        </div>
+
+        <div class="question" data-answer="1">
+          <p>15. Молекулалық орбиталь теориясында байланысушы орбитальдың әсері:</p>
+          <label class="option"><input type="radio" name="s2q15" value="0"> Электрон тығыздығын ядролар арасынан алыстатып, байланысты әлсіретеді</label>
+          <label class="option"><input type="radio" name="s2q15" value="1"> Электрон тығыздығын ядролар арасына жинақтап, энергияны төмендетеді</label>
+          <label class="option"><input type="radio" name="s2q15" value="2"> Атомдарды иондарға толық айналдырады</label>
+          <label class="option"><input type="radio" name="s2q15" value="3"> Кристалл торында бос орындар түзеді</label>
+          <label class="option"><input type="radio" name="s2q15" value="4"> Молекуладағы барлық электрондарды ядроға түсіреді</label>
+          <div class="explain">Дұрыс жауап: B. Байланысушы орбиталь энергияны төмендетіп, байланысты тұрақтандырады.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>16. Байланыс реті формуласы:</p>
+          <label class="option"><input type="radio" name="s2q16" value="0"> BO = Nb + Na</label>
+          <label class="option"><input type="radio" name="s2q16" value="1"> BO = Na − Nb</label>
+          <label class="option"><input type="radio" name="s2q16" value="2"> BO = Nb/Na</label>
+          <label class="option"><input type="radio" name="s2q16" value="3"> BO = 2(Nb + Na)</label>
+          <label class="option"><input type="radio" name="s2q16" value="4"> BO = (Nb − Na)/2</label>
+          <div class="explain">Дұрыс жауап: E. Байланыс реті байланысушы және босаңдатушы электрондар айырмасының жартысына тең.</div>
+        </div>
+
+        <div class="question" data-answer="2">
+          <p>17. Байланыс реті артқанда байланыс қасиеттері қалай өзгереді?</p>
+          <label class="option"><input type="radio" name="s2q17" value="0"> Байланыс ұзындығы артып, энергиясы азаяды</label>
+          <label class="option"><input type="radio" name="s2q17" value="1"> Байланыс ұзындығы да, энергиясы да азаяды</label>
+          <label class="option"><input type="radio" name="s2q17" value="2"> Байланыс қысқарып, байланыс энергиясы артады</label>
+          <label class="option"><input type="radio" name="s2q17" value="3"> Байланыс иондық сипаттан толық металдық сипатқа өтеді</label>
+          <label class="option"><input type="radio" name="s2q17" value="4"> Байланыс реті молекула геометриясына әсер етпейді</label>
+          <div class="explain">Дұрыс жауап: C. Байланыс реті жоғары болса, байланыс әдетте қысқа және берік болады.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>18. Полярлы ковалентті байланыс қандай жағдайда түзіледі?</p>
+          <label class="option"><input type="radio" name="s2q18" value="0"> Байланысқан атомдардың электртерістілігі әртүрлі болғанда</label>
+          <label class="option"><input type="radio" name="s2q18" value="1"> Екі атомның электртерістілігі бірдей болғанда</label>
+          <label class="option"><input type="radio" name="s2q18" value="2"> Екі атом да инертті газ болғанда</label>
+          <label class="option"><input type="radio" name="s2q18" value="3"> Электрондар толық металл торына өткенде</label>
+          <label class="option"><input type="radio" name="s2q18" value="4"> Байланысушы орбиталь бос болғанда</label>
+          <div class="explain">Дұрыс жауап: A. Электртерістілік айырмасы электрон тығыздығының ығысуына әкеледі.</div>
+        </div>
+
+        <button class="check-btn" onclick="checkBlock('block2')">Тестті тексеру</button>
+      </div>
+    </section>
